@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>script.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+script.py</font>
+</center></td></tr></table>
+<pre><span class="s0">from </span><span class="s1">molmass </span><span class="s0">import </span><span class="s1">Formula</span>
+<span class="s1">bot_name</span><span class="s2">: </span><span class="s1">str</span><span class="s2">= </span><span class="s3">'Luke'</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s3">f&quot;</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: Hello, welcome to Luke's stoichemetry calculator! Please input if your solving a molarity or stoichemetry problem&quot;</span><span class="s2">)</span>
+<span class="s0">while True</span><span class="s2">:</span>
+    <span class="s1">user_input </span><span class="s2">= </span><span class="s1">user_name </span><span class="s2">= </span><span class="s1">input</span><span class="s2">(</span><span class="s3">'You:'</span><span class="s2">).</span><span class="s1">lower</span><span class="s2">()</span>
+    <span class="s1">formula </span><span class="s2">= </span><span class="s1">Formula</span><span class="s2">(</span><span class="s1">user_input</span><span class="s2">)</span>
+
+    <span class="s0">if </span><span class="s1">user_input </span><span class="s2">== </span><span class="s3">'molarity'</span><span class="s2">:</span>
+     <span class="s1">print</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: Please input the unknown: concentration, moles, or volume'</span><span class="s2">)</span>
+    <span class="s0">elif </span><span class="s1">user_input </span><span class="s2">== [</span><span class="s3">&quot;hello, hi, what's up&quot;</span><span class="s2">]:</span>
+        <span class="s1">print</span><span class="s2">(</span><span class="s3">f&quot;</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: Hello, welcome to Luke's stoichemetry calculator&quot;</span><span class="s2">)</span>
+    <span class="s0">elif </span><span class="s1">user_input </span><span class="s2">== </span><span class="s3">'concentration'</span><span class="s2">:</span>
+         <span class="s1">num1 </span><span class="s2">= </span><span class="s1">float</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: Enter the number of moles:'</span><span class="s2">))</span>
+         <span class="s1">num2 </span><span class="s2">= </span><span class="s1">float</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: Enter the volume of the solution in liters:'</span><span class="s2">))</span>
+         <span class="s0">def </span><span class="s1">divide</span><span class="s2">(</span><span class="s1">num1</span><span class="s2">, </span><span class="s1">num2</span><span class="s2">):</span>
+               <span class="s0">return </span><span class="s1">num1</span><span class="s2">/</span><span class="s1">num2</span>
+         <span class="s1">result </span><span class="s2">= </span><span class="s1">divide</span><span class="s2">(</span><span class="s1">num1</span><span class="s2">, </span><span class="s1">num2</span><span class="s2">)</span>
+         <span class="s1">print</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">} </span><span class="s3">The molarity is </span><span class="s0">{</span><span class="s1">result</span><span class="s0">} </span><span class="s3">mol/L'</span><span class="s2">)</span>
+         <span class="s0">break</span>
+    <span class="s0">elif </span><span class="s1">user_input </span><span class="s2">== </span><span class="s3">'moles'</span><span class="s2">:</span>
+        <span class="s1">num1 </span><span class="s2">= </span><span class="s1">float</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: Enter the concentration in molars:'</span><span class="s2">))</span>
+        <span class="s1">num2 </span><span class="s2">= </span><span class="s1">float</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: Enter the volume of the solution in liters:'</span><span class="s2">))</span>
+        <span class="s0">def </span><span class="s1">multiply</span><span class="s2">(</span><span class="s1">num1</span><span class="s2">, </span><span class="s1">num2</span><span class="s2">):</span>
+            <span class="s0">return </span><span class="s1">num1</span><span class="s2">*</span><span class="s1">num2</span>
+        <span class="s1">result </span><span class="s2">= </span><span class="s1">num1</span><span class="s2">*</span><span class="s1">num2</span>
+        <span class="s1">print</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">} </span><span class="s3">The number of moles is </span><span class="s0">{</span><span class="s1">result</span><span class="s0">}</span><span class="s3">'</span><span class="s2">)</span>
+        <span class="s0">break</span>
+    <span class="s0">elif </span><span class="s1">user_input </span><span class="s2">== </span><span class="s3">'volume'</span><span class="s2">:</span>
+        <span class="s1">num1 </span><span class="s2">= </span><span class="s1">float</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: Enter the number of moles:'</span><span class="s2">))</span>
+        <span class="s1">num2 </span><span class="s2">= </span><span class="s1">float</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: Enter the conentration of the solution in molars:'</span><span class="s2">))</span>
+        <span class="s0">def </span><span class="s1">divide</span><span class="s2">(</span><span class="s1">num1</span><span class="s2">, </span><span class="s1">num2</span><span class="s2">):</span>
+            <span class="s0">return </span><span class="s1">num1</span><span class="s2">/</span><span class="s1">num2</span>
+        <span class="s1">result </span><span class="s2">= </span><span class="s1">num1</span><span class="s2">/</span><span class="s1">num2</span>
+        <span class="s1">print</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: The volume of the solution is </span><span class="s0">{</span><span class="s1">result</span><span class="s0">} </span><span class="s3">liters'</span><span class="s2">)</span>
+        <span class="s0">break</span>
+    <span class="s0">elif </span><span class="s1">user_input </span><span class="s2">== </span><span class="s3">'stoichemetry'</span><span class="s2">:</span>
+        <span class="s1">print</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: Please input the unknown: mass or number of moles'</span><span class="s2">)</span>
+    <span class="s0">elif </span><span class="s1">user_input </span><span class="s2">== </span><span class="s3">'mass'</span><span class="s2">:</span>
+        <span class="s1">compound_input </span><span class="s2">= (</span><span class="s1">input</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: Enter the chemical compound of the substance with capitilization of elements (eg. H2O):'</span><span class="s2">))</span>
+        <span class="s1">formula </span><span class="s2">= </span><span class="s1">Formula</span><span class="s2">(</span><span class="s1">compound_input</span><span class="s2">)</span>
+        <span class="s1">formula_mass </span><span class="s2">= </span><span class="s1">formula</span><span class="s2">.</span><span class="s1">mass</span>
+        <span class="s1">num2 </span><span class="s2">= </span><span class="s1">float</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: Enter the number of moles:'</span><span class="s2">))</span>
+        <span class="s0">def </span><span class="s1">multiply</span><span class="s2">(</span><span class="s1">formula_mass</span><span class="s2">, </span><span class="s1">num2</span><span class="s2">):</span>
+            <span class="s0">return </span><span class="s1">formula_mass</span><span class="s2">*</span><span class="s1">num2</span>
+        <span class="s1">result </span><span class="s2">= </span><span class="s1">formula_mass</span><span class="s2">*</span><span class="s1">num2</span>
+        <span class="s1">print</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: The mass of the substance is </span><span class="s0">{</span><span class="s1">result</span><span class="s0">} </span><span class="s3">grams'</span><span class="s2">)</span>
+        <span class="s0">break</span>
+    <span class="s0">elif </span><span class="s1">user_input </span><span class="s2">== </span><span class="s3">'number of moles'</span><span class="s2">:</span>
+        <span class="s1">num1 </span><span class="s2">= </span><span class="s1">float</span><span class="s2">(</span><span class="s1">input</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: Enter the number of grams:'</span><span class="s2">))</span>
+        <span class="s1">compound_input </span><span class="s2">= (</span><span class="s1">input</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: Enter the chemical compound of the substance with capitilization of elements (eg. H2O):'</span><span class="s2">))</span>
+        <span class="s1">formula </span><span class="s2">= </span><span class="s1">Formula</span><span class="s2">(</span><span class="s1">compound_input</span><span class="s2">)</span>
+        <span class="s1">formula_mass </span><span class="s2">= </span><span class="s1">formula</span><span class="s2">.</span><span class="s1">mass</span>
+        <span class="s0">def </span><span class="s1">divide</span><span class="s2">(</span><span class="s1">num1</span><span class="s2">, </span><span class="s1">formula_mass</span><span class="s2">):</span>
+            <span class="s0">return </span><span class="s1">num1</span><span class="s2">/</span><span class="s1">formula_mass</span>
+        <span class="s1">result </span><span class="s2">= </span><span class="s1">num1</span><span class="s2">/</span><span class="s1">formula_mass</span>
+        <span class="s1">print</span><span class="s2">(</span><span class="s3">f'</span><span class="s0">{</span><span class="s1">bot_name</span><span class="s0">}</span><span class="s3">: The number of moles of in the substance is </span><span class="s0">{</span><span class="s1">result</span><span class="s0">}</span><span class="s3">'</span><span class="s2">)</span>
+        <span class="s0">break</span>
+    <span class="s0">else</span><span class="s2">:</span>
+        <span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Luke: Please enter the unknown or known measurment/unit exactly as it appears&quot;</span><span class="s2">)</span></pre>
+</body>
+</html>
